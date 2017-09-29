@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://java.sun.com/xml/ns/javaee" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>userInfoServlet</servlet-name>
+    <servlet-class>  
+			com.ray.dingtalk.servlet.UserInfoServlet
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userInfoServlet</servlet-name>
+    <url-pattern>/userInfoServlet</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>
