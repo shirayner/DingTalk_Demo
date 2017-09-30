@@ -20,7 +20,9 @@ import com.ray.dingtalk.util.HttpHelper;
 
 
 
-/**@desc  : AccessToken和jsticket的获取封装
+/**
+ * 钉钉相关配置参数的获取工具类
+ * @desc  : AccessToken和jsticket的获取封装
  * 
  * @author: shirayner
  * @date  : 2017年9月27日 下午5:00:25
@@ -137,7 +139,7 @@ public class AuthHelper {
 
 
 	/**
-	 * @desc ：获取前端jsapi需要的配置参数
+	 * @desc ：获取前端jsapi需要的配置参数（已弃用，请用getConfig(HttpServletRequest)）
 	 *  
 	 * @param request      request:在钉钉中点击微应用图标跳转的url地址 
 	 * @return Map<String,Object>  将需要的参数存入map,并返回

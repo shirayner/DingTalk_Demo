@@ -37,20 +37,18 @@ dd.ready(function() {
 
 
 
-	/* 2.获取免登授权码
-	 *获得免登授权码，需要的参数为corpid，也就是企业的ID 
-	 *成功调用时返回onSuccess,返回值在function的参数info中，具体操作可以在function中实现 
-	 *返回失败时调用onFail 
-	 */  
+    /**获取免登授权码 CODE
+     * 
+     */
 	dd.runtime.permission.requestAuthCode({  
 		corpId : _config.corpId,  
 		onSuccess : function(info) {                                                   //成功获得code值,code值在info中  
     		alert('authcode: ' + info.code);  
 			/* 
 			 *$.ajax的是用来使得当前js页面和后台服务器交互的方法 
-			 *参数url:是需要交互的后台服务器处理代码，这里的userinfo对应WEB-INF -> classes文件中的UserInfoServlet处理程序 
+			 *参数url:是需要交互的后台服务器处理代码，userInfoServlet
 			 *参数type:指定和后台交互的方法，因为后台servlet代码中处理Get和post的doGet和doPost 
-			 *原本需要传输的参数可以用data来存储的，格式为data:{"code":info.code,"corpid":_config.corpid} 
+			 *data:负责传递请求参数
 			 *其中success方法和error方法是回调函数，分别表示成功交互后和交互失败情况下处理的方法 
 			 */  
 			$.ajax({  
@@ -61,8 +59,10 @@ dd.ready(function() {
 				},
 				success : function(data, status, xhr) {
 					alert(data);
+					//接收后端发送过来的用户信息
 					var userInfo = JSON.parse(data);
 
+					//收到用户信息后所做的处理
 					document.getElementById("userName").innerHTML = userInfo.name;
 					document.getElementById("userId").innerHTML = userInfo.userid;
 

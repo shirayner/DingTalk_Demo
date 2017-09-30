@@ -54,7 +54,7 @@ public class UserService {
 	}
 
 
-	/** 2.获取成员详情
+	/** 2.根据userid获取成员详情
 	 * @desc ：获取成员详情
 	 *   参考文档： https://open-doc.dingtalk.com/docs/doc.htm?spm=0.0.0.0.jjSfQQ&treeId=371&articleId=106816&docType=1#s0
 	 * @param accessToken
