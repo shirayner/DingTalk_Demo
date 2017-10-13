@@ -1,8 +1,6 @@
 package com.ray.dingtalk.test;
 
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.ray.dingtalk.auth.AuthHelper;
 import com.ray.dingtalk.config.Env;
@@ -13,7 +11,7 @@ import com.ray.dingtalk.config.Env;
  * @date  : 2017年9月27日 下午11:42:04
  */
 public class AuthHelperTest {
-	private static Logger log = LoggerFactory.getLogger(AuthHelperTest.class);  
+
 	@Test
 	public void testGetAccessToken() throws Exception {
 		
@@ -35,8 +33,7 @@ public class AuthHelperTest {
 	
 	@Test
 	public void testLog4j() {
-		log.info("aaaaaaaa");
-		log.debug("bbbbb");
+
 		
 		
 		
